@@ -14,6 +14,9 @@
 		A162D359281CE55300EF058F /* Senior_Design.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A162D357281CE55300EF058F /* Senior_Design.xcdatamodeld */; };
 		A162D35B281CE55500EF058F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A162D35A281CE55500EF058F /* Assets.xcassets */; };
 		A162D35E281CE55500EF058F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162D35C281CE55500EF058F /* LaunchScreen.storyboard */; };
+		A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6B282088CF0055EDC9 /* MapViewController.swift */; };
+		A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */; };
+		A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A162D35A281CE55500EF058F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A162D35D281CE55500EF058F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A162D35F281CE55500EF058F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1987E6B282088CF0055EDC9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			children = (
 				A162D34E281CE55300EF058F /* AppDelegate.swift */,
 				A162D350281CE55300EF058F /* SceneDelegate.swift */,
+				A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */,
+				A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */,
+				A1987E6B282088CF0055EDC9 /* MapViewController.swift */,
 				A162D352281CE55300EF058F /* ViewController.swift */,
 				A162D354281CE55300EF058F /* Main.storyboard */,
 				A162D35A281CE55500EF058F /* Assets.xcassets */,
@@ -141,9 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */,
+				A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */,
 				A162D353281CE55300EF058F /* ViewController.swift in Sources */,
 				A162D34F281CE55300EF058F /* AppDelegate.swift in Sources */,
 				A162D351281CE55300EF058F /* SceneDelegate.swift in Sources */,
+				A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */,
 				A162D359281CE55300EF058F /* Senior_Design.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

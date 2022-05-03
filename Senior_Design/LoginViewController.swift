@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Senior_Design
 //
-//  Created by MinYoung Yang on 4/29/22.
+//  Created by MinYoung Yang on 5/2/22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +15,3 @@ class ViewController: UIViewController {
     }
 
 }
-
