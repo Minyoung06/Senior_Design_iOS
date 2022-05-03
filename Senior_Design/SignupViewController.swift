@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignupViewController.swift
 //  Senior_Design
 //
 //  Created by MinYoung Yang on 4/29/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
