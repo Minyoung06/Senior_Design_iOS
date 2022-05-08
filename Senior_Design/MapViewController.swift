@@ -13,6 +13,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
+    var resultSearchController:UISearchController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,43 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest   //accuracy
         locationManager.requestWhenInUseAuthorization() //permission
-        locationManager.startUpdatingLocation()
+        locationManager.startUpdatingLocation() //update user's current location
         mapView.showsUserLocation = true
         
+        //For locationSearchTable
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search location"
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = true
+        
+        locationSearchTable.mapView = mapView
         
     }
+    
+    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error:: (error)")
+    }
+  
 }
+
+
 
