@@ -4,6 +4,11 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Italic-VariableFont_wght.ttf</string>
+		<string>Montserrat-VariableFont_wght.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

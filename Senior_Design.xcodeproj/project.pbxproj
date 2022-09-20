@@ -19,6 +19,7 @@
 		A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6B282088CF0055EDC9 /* MapViewController.swift */; };
 		A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */; };
 		A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */; };
+		A1A47A5928D8D3AD009E8ED0 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A1A47A5828D8D3AD009E8ED0 /* fonts */; };
 		A1BB4CE72827CDD6008ED7A5 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +39,9 @@
 		A1987E6B282088CF0055EDC9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
+		A1A47A5828D8D3AD009E8ED0 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 				78083DECF5B4A66B3FC12C8C /* Pods-Senior_Design.debug.xcconfig */,
 				D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,6 +99,7 @@
 				A162D35C281CE55500EF058F /* LaunchScreen.storyboard */,
 				A162D35F281CE55500EF058F /* Info.plist */,
 				A162D357281CE55300EF058F /* Senior_Design.xcdatamodeld */,
+				A1A47A5828D8D3AD009E8ED0 /* fonts */,
 			);
 			path = Senior_Design;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A162D35E281CE55500EF058F /* LaunchScreen.storyboard in Resources */,
+				A1A47A5928D8D3AD009E8ED0 /* fonts in Resources */,
 				2B9E7EAE28287F3E008D814C /* GoogleService-Info.plist in Resources */,
 				A162D35B281CE55500EF058F /* Assets.xcassets in Resources */,
 				A162D356281CE55300EF058F /* Main.storyboard in Resources */,
