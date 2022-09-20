@@ -14,5 +14,8 @@ target 'Senior_Design' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Performance'
   pod 'Firebase/Storage'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  
 
 end
