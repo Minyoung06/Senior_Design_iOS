@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B9E7EAE28287F3E008D814C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E7EAD28287F3E008D814C /* GoogleService-Info.plist */; };
+		2BC7426528D9120A00A83B28 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7426428D9120A00A83B28 /* Constants.swift */; };
 		52D68352E5910002C966B853 /* Pods_Senior_Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933F36D53506932D4A75CD93 /* Pods_Senior_Design.framework */; };
 		A162D34F281CE55300EF058F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162D34E281CE55300EF058F /* AppDelegate.swift */; };
 		A162D351281CE55300EF058F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162D350281CE55300EF058F /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2B9E7EAD28287F3E008D814C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2BC7426428D9120A00A83B28 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78083DECF5B4A66B3FC12C8C /* Pods-Senior_Design.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.debug.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.debug.xcconfig"; sourceTree = "<group>"; };
 		933F36D53506932D4A75CD93 /* Pods_Senior_Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Senior_Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162D34B281CE55300EF058F /* Senior_Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senior_Design.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,8 +40,8 @@
 		A1987E6B282088CF0055EDC9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
 		A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 				78083DECF5B4A66B3FC12C8C /* Pods-Senior_Design.debug.xcconfig */,
 				D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +95,7 @@
 				A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */,
 				A162D352281CE55300EF058F /* ViewController.swift */,
 				A162D354281CE55300EF058F /* Main.storyboard */,
+				2BC7426428D9120A00A83B28 /* Constants.swift */,
 				A162D35A281CE55500EF058F /* Assets.xcassets */,
 				A162D35C281CE55500EF058F /* LaunchScreen.storyboard */,
 				A162D35F281CE55500EF058F /* Info.plist */,
@@ -234,6 +236,7 @@
 				A162D351281CE55300EF058F /* SceneDelegate.swift in Sources */,
 				A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */,
 				A162D359281CE55300EF058F /* Senior_Design.xcdatamodeld in Sources */,
+				2BC7426528D9120A00A83B28 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
