@@ -9,11 +9,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    var resultSearchController:UISearchController? = nil
+    var resultSearchController: UISearchController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
