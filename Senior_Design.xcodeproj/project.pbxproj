@@ -20,6 +20,8 @@
 		A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */; };
 		A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */; };
 		A1BB4CE72827CDD6008ED7A5 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */; };
+		A1D3CCCB28DD61DE00659F71 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1D3CCCA28DD61DE00659F71 /* Montserrat-VariableFont_wght.ttf */; };
+		A1D3CCCE28E126AC00659F71 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1D3CCCD28E126AC00659F71 /* Montserrat-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		A1D3CCCA28DD61DE00659F71 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		A1D3CCCD28E126AC00659F71 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 		A162D34D281CE55300EF058F /* Senior_Design */ = {
 			isa = PBXGroup;
 			children = (
+				A1D3CCC928DD61DE00659F71 /* Fonts */,
 				2B9E7EAD28287F3E008D814C /* GoogleService-Info.plist */,
 				A162D34E281CE55300EF058F /* AppDelegate.swift */,
 				A162D350281CE55300EF058F /* SceneDelegate.swift */,
@@ -93,12 +98,32 @@
 				A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */,
 				A162D352281CE55300EF058F /* ViewController.swift */,
 				A162D354281CE55300EF058F /* Main.storyboard */,
+				2BC7426428D9120A00A83B28 /* Constants.swift */,
+				A1D3CCCC28E126AB00659F71 /* Fonts */,
 				A162D35A281CE55500EF058F /* Assets.xcassets */,
 				A162D35C281CE55500EF058F /* LaunchScreen.storyboard */,
 				A162D35F281CE55500EF058F /* Info.plist */,
 				A162D357281CE55300EF058F /* Senior_Design.xcdatamodeld */,
 			);
 			path = Senior_Design;
+			sourceTree = "<group>";
+		};
+		A1D3CCC928DD61DE00659F71 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A1D3CCCA28DD61DE00659F71 /* Montserrat-VariableFont_wght.ttf */,
+			);
+			name = Fonts;
+			path = ../../Fonts;
+			sourceTree = "<group>";
+		};
+		A1D3CCCC28E126AB00659F71 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A1D3CCCD28E126AC00659F71 /* Montserrat-VariableFont_wght.ttf */,
+			);
+			name = Fonts;
+			path = ../../Fonts;
 			sourceTree = "<group>";
 		};
 		A3C43A8F2D220011516A55B2 /* Frameworks */ = {
@@ -173,6 +198,8 @@
 				2B9E7EAE28287F3E008D814C /* GoogleService-Info.plist in Resources */,
 				A162D35B281CE55500EF058F /* Assets.xcassets in Resources */,
 				A162D356281CE55300EF058F /* Main.storyboard in Resources */,
+				A1D3CCCE28E126AC00659F71 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				A1D3CCCB28DD61DE00659F71 /* Montserrat-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
