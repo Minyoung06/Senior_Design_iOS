@@ -114,11 +114,12 @@
                         <outlet property="errorLabel" destination="M1M-yQ-kxX" id="avJ-5L-6fY"/>
                         <outlet property="passwordTextField" destination="bPX-Sj-aOi" id="t4O-2X-yFX"/>
                         <outlet property="usernameTextField" destination="U6E-eZ-9yr" id="wA5-b8-NzN"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginSegue" id="Qi4-Wo-e2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCH-hr-TaT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1572.4637681159422" y="66.964285714285708"/>
+            <point key="canvasLocation" x="-1572" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nzr-MH-R8L">
@@ -178,7 +179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hel-WN-0TW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282" y="-645"/>
+            <point key="canvasLocation" x="-284" y="-674"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="glI-k9-gJz">
@@ -324,6 +325,7 @@
                         <outlet property="nameTextField" destination="YXl-RX-heO" id="O2z-Mn-n53"/>
                         <outlet property="passwordTextField" destination="PL0-7e-Ct7" id="G92-5t-VMf"/>
                         <outlet property="phoneNumberTextField" destination="yU5-XO-7H5" id="WFZ-fV-JYc"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signUpSegue" id="Qsv-nO-qSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBR-qf-2Bs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,6 +366,9 @@
             <point key="canvasLocation" x="-283" y="67"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qsv-nO-qSV"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CaddieConnectLogo" width="1306" height="861"/>
         <namedColor name="AccentColor">

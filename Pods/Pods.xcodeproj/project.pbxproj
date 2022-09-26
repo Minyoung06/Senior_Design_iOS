@@ -14370,7 +14370,7 @@
 		22B540166323CE8794A9457607141268 /* transport_security_common.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = transport_security_common.upb.h; path = "src/core/ext/upb-generated/src/proto/grpc/gcp/transport_security_common.upb.h"; sourceTree = "<group>"; };
 		22C2055183FEDCFD905E255BDED639E7 /* http_tracer.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = http_tracer.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/config/trace/v3/http_tracer.upbdefs.h"; sourceTree = "<group>"; };
 		22E2DC1AD035F6881E26627FAE1A46A4 /* distribution_caller.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = distribution_caller.h; path = absl/random/internal/distribution_caller.h; sourceTree = "<group>"; };
-		22E70539387C3C355F2147A63B506A11 /* Pods-Senior_Design */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Senior_Design"; path = Pods_Senior_Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E70539387C3C355F2147A63B506A11 /* Pods_Senior_Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Senior_Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F02321C36CEB0267F181B20C51D14B /* cfstream_handle.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = cfstream_handle.cc; path = src/core/lib/iomgr/cfstream_handle.cc; sourceTree = "<group>"; };
 		22F4BAC07646C51701CEDF86CA6927A5 /* ssl_utils_config.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ssl_utils_config.cc; path = src/core/lib/security/security_connector/ssl_utils_config.cc; sourceTree = "<group>"; };
 		230939D35BFED504EA23E99214D96859 /* xds_listener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds_listener.h; path = src/core/ext/xds/xds_listener.h; sourceTree = "<group>"; };
@@ -22578,7 +22578,7 @@
 				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
 				6BC54C3D03DEBF9C3A40965E69CAE039 /* uv.framework */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				22E70539387C3C355F2147A63B506A11 /* Pods-Senior_Design */,
+				22E70539387C3C355F2147A63B506A11 /* Pods_Senior_Design.framework */,
 				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
 			);
 			name = Products;
@@ -29420,7 +29420,7 @@
 			);
 			name = "Pods-Senior_Design";
 			productName = Pods_Senior_Design;
-			productReference = 22E70539387C3C355F2147A63B506A11 /* Pods-Senior_Design */;
+			productReference = 22E70539387C3C355F2147A63B506A11 /* Pods_Senior_Design.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */ = {

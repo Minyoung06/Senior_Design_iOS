@@ -85,7 +85,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                             self.showError("Error in saving user data")
                         }
                         //transition to home screen
-                        self.transitionToHome()
+                        self.performSegue(withIdentifier: "signUpSegue", sender: self)
                         }
                 }
             }
@@ -95,13 +95,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
-    }
-    
-    func transitionToHome() {
-        let mapViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.mapViewController) as? MapViewController
-        
-        view.window?.rootViewController = mapViewController
-        view.window?.makeKeyAndVisible()
     }
     
     //UITextFieldDelegate

@@ -34,10 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.alpha = 1
             }
             else {
-                let mapViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.mapViewController) as? MapViewController
-                
-                self.view.window?.rootViewController = mapViewController
-                self.view.window?.makeKeyAndVisible()
+                self.performSegue(withIdentifier: "loginSegue", sender: self)
             }
         }
     }
