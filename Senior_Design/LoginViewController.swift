@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+        errorLabel.isHidden = true
     }
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             if error != nil {
                 //failed to sign in
+                self.errorLabel.isHidden = false
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             }
