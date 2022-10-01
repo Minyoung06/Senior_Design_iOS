@@ -19,6 +19,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         phoneNumberTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        errorLabel.isHidden = true
     }
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -93,6 +94,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showError(_ message: String) {
+        errorLabel.isHidden = false
         errorLabel.text = message
         errorLabel.alpha = 1
     }
