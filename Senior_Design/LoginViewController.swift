@@ -36,7 +36,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.alpha = 1
             }
             else {
-                self.performSegue(withIdentifier: "loginSegue", sender: self)
+                //make the tab bar controller the main view controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                
+                //self.performSegue(withIdentifier: "loginSegue", sender: self)
             }
         }
     }
