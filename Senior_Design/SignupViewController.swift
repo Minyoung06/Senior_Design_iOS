@@ -86,7 +86,12 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                             self.showError("Error in saving user data")
                         }
                         //transition to home screen
-                        self.performSegue(withIdentifier: "signUpSegue", sender: self)
+                        //self.performSegue(withIdentifier: "signUpSegue", sender: self)
+                        //make the tab bar controller the main view controller
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                        
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
                         }
                 }
             }
