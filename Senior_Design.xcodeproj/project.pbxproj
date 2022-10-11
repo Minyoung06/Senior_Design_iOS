@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B9E7EAE28287F3E008D814C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E7EAD28287F3E008D814C /* GoogleService-Info.plist */; };
+		2BD341D528F369560068D2F7 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD341D428F369560068D2F7 /* UserProfileViewController.swift */; };
 		52D68352E5910002C966B853 /* Pods_Senior_Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933F36D53506932D4A75CD93 /* Pods_Senior_Design.framework */; };
 		A154AF1928E8045A00152967 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A154AF1828E8045A00152967 /* Montserrat-VariableFont_wght.ttf */; };
 		A162D34F281CE55300EF058F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162D34E281CE55300EF058F /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2B9E7EAD28287F3E008D814C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2BD341D428F369560068D2F7 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		78083DECF5B4A66B3FC12C8C /* Pods-Senior_Design.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.debug.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.debug.xcconfig"; sourceTree = "<group>"; };
 		933F36D53506932D4A75CD93 /* Pods_Senior_Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Senior_Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A154AF1828E8045A00152967 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */,
 				A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */,
 				A1987E6B282088CF0055EDC9 /* MapViewController.swift */,
+				2BD341D428F369560068D2F7 /* UserProfileViewController.swift */,
 				A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */,
 				A162D352281CE55300EF058F /* ViewController.swift */,
 				A162D354281CE55300EF058F /* Main.storyboard */,
@@ -244,6 +247,7 @@
 				A162D34F281CE55300EF058F /* AppDelegate.swift in Sources */,
 				A162D351281CE55300EF058F /* SceneDelegate.swift in Sources */,
 				A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */,
+				2BD341D528F369560068D2F7 /* UserProfileViewController.swift in Sources */,
 				A162D359281CE55300EF058F /* Senior_Design.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
