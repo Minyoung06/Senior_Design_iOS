@@ -40,9 +40,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search location"
+        searchBar.backgroundColor = UIColor.white
         navigationItem.titleView = resultSearchController?.searchBar
+
         resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.obscuresBackgroundDuringPresentation = true
         definesPresentationContext = true
+        
+        let statusBar = UIView(frame: (UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame)!)
+        statusBar.backgroundColor = UIColor.white
+        UIApplication.shared.keyWindow?.addSubview(statusBar)
+        
+        self.tabBarController?.tabBar.backgroundColor = UIColor.white
         
         locationSearchTable.mapView = mapView
         
