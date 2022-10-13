@@ -25,10 +25,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //get cleaned versions of the text fields
         let email = usernameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
+
         //sign in the user
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            
+
             if error != nil {
                 //failed to sign in
                 self.errorLabel.isHidden = false
@@ -39,9 +39,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 //make the tab bar controller the main view controller
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
-                
+
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
-                
+
                 //self.performSegue(withIdentifier: "loginSegue", sender: self)
             }
         }
