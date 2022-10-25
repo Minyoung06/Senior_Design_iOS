@@ -6,19 +6,59 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class UserProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CircularImage.layer.masksToBounds = true
-        CircularImage.layer.cornerRadius = CircularImage.bounds.width / 2
+        nameLabel.isHidden = true
+        emailLabel.isHidden = true
+        addressLabel.isHidden = true
+        phoneLabel.isHidden = true
+        getCurrentUserData()
     }
     
-    
-    @IBOutlet weak var CircularImage: UIImageView!
-    
+    func getCurrentUserData() {
+         //Get specific document from current user
+         let docRef = Firestore.firestore()
+            .collection("CaddieDatabase")
+            .whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+
+         //Get user information
+         docRef.getDocuments { (querySnapshot, err) in
+             if let err = err {
+                 print(err.localizedDescription)
+             } else if querySnapshot!.documents.count != 1 {
+                 print("More than one document or none")
+             } else {
+                 let document = querySnapshot!.documents.first
+                 let dataDescription = document?.data()
+                 guard let name = dataDescription?["caddieName"] else { return }
+                 guard let email = dataDescription?["caddieEmail"] else { return }
+                 guard let address = dataDescription?["caddieAddress"] else { return }
+                 guard let phone = dataDescription?["caddiePhone"] else { return }
+                 
+                 self.nameLabel.text = name as? String ?? ""
+                 self.emailLabel.text = email as? String ?? ""
+                 self.addressLabel.text = address as? String ?? ""
+                 self.phoneLabel.text = phone as? String ?? ""
+                 
+                 self.nameLabel.isHidden = false
+                 self.emailLabel.isHidden = false
+                 self.addressLabel.isHidden = false
+                 self.phoneLabel.isHidden = false
+             }
+         }
+     }
+
     @IBAction func SignOutBtn(_ sender: Any) {
         
         let myAlert = UIAlertController(title: "Sign Out", message: "Are you sure you would like to sign out?", preferredStyle: UIAlertController.Style.alert)
@@ -37,4 +77,3 @@ class UserProfileViewController: UIViewController {
     }
     
 }
-
