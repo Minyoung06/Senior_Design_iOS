@@ -22,6 +22,8 @@
 		A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */; };
 		A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */; };
 		A1BB4CE72827CDD6008ED7A5 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */; };
+		A1C6E015290CB1FF00AEB94F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6E014290CB1FF00AEB94F /* Items.swift */; };
+		A1C6E017290CC35500AEB94F /* JobListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6E016290CC35500AEB94F /* JobListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		A1987E6D2820ABEA0055EDC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A1987E6F2820ABFF0055EDC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		A1C6E014290CB1FF00AEB94F /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		A1C6E016290CC35500AEB94F /* JobListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListTableViewController.swift; sourceTree = "<group>"; };
 		D7A3B8AA8FCD5CFDD32E1464 /* Pods-Senior_Design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Senior_Design.release.xcconfig"; path = "Target Support Files/Pods-Senior_Design/Pods-Senior_Design.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +110,9 @@
 				2BD341D428F369560068D2F7 /* UserProfileViewController.swift */,
 				A1BB4CE62827CDD6008ED7A5 /* LocationSearchTable.swift */,
 				A162D352281CE55300EF058F /* ViewController.swift */,
+				A1C6E014290CB1FF00AEB94F /* Items.swift */,
 				A162D354281CE55300EF058F /* Main.storyboard */,
+				A1C6E016290CC35500AEB94F /* JobListTableViewController.swift */,
 				A162D35A281CE55500EF058F /* Assets.xcassets */,
 				A162D35C281CE55500EF058F /* LaunchScreen.storyboard */,
 				A162D35F281CE55500EF058F /* Info.plist */,
@@ -243,7 +249,9 @@
 				A1987E702820ABFF0055EDC9 /* LoginViewController.swift in Sources */,
 				A1987E6E2820ABEA0055EDC9 /* SignupViewController.swift in Sources */,
 				A162D353281CE55300EF058F /* ViewController.swift in Sources */,
+				A1C6E017290CC35500AEB94F /* JobListTableViewController.swift in Sources */,
 				A1BB4CE72827CDD6008ED7A5 /* LocationSearchTable.swift in Sources */,
+				A1C6E015290CB1FF00AEB94F /* Items.swift in Sources */,
 				A162D34F281CE55300EF058F /* AppDelegate.swift in Sources */,
 				A162D351281CE55300EF058F /* SceneDelegate.swift in Sources */,
 				A1987E6C282088CF0055EDC9 /* MapViewController.swift in Sources */,
