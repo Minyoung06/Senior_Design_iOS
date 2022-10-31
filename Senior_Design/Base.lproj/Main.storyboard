@@ -40,13 +40,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-xh-yZB">
-                                <rect key="frame" x="20" y="667.5" width="231.5" height="21"/>
+                                <rect key="frame" x="20" y="752.5" width="231.5" height="21"/>
                                 <fontDescription key="fontDescription" name="MontserratRoman-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAY-RZ-5FP">
-                                <rect key="frame" x="260" y="658.5" width="135" height="37.5"/>
+                                <rect key="frame" x="260" y="743.5" width="135" height="37.5"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-55-AcL">
-                                <rect key="frame" x="114" y="548.5" width="186" height="57"/>
+                                <rect key="frame" x="114" y="633.5" width="186" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="RlZ-ts-WmL"/>
                                 </constraints>
@@ -77,7 +77,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1M-yQ-kxX">
-                                <rect key="frame" x="48" y="511" width="318" height="17.5"/>
+                                <rect key="frame" x="48" y="511" width="318" height="102.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="e0S-28-qvp"/>
                                 </constraints>
