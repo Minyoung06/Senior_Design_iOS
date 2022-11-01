@@ -92,10 +92,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print("Ok button tapped")
             self.jobAlertAccept()
             
-            let placeMark = handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedPin!).placemarkName
-            let selectedItem =
-            let placemarkName = placeMark.name
-            print(placemarkName)
+//            let placeMark = handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedPin!).placemarkName
+//            let selectedItem =
+//            let placemarkName = placeMark.name
+//            print(placemarkName)
             
 //            let placemarkName = self.dropPinZoomIn(placemark: self.selectedPin!).placemarkName
 //            print(placemarkName)
@@ -156,13 +156,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let docRef = db.collection("JobShiftDatabase").document(
             "92KaIhe3UZMmJzLB5OMV") //Lido
         
-        docRef.setData("caddie": userUID!) { error in
-            if let error = error {
-                print("Error writing document: \(error)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
+//        docRef.setData("caddie": userUID!) { error in
+//            if let error = error {
+//                print("Error writing document: \(error)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
     }
     
 //    func compareGolfClubNames(placemark: MKPlacemark) {
