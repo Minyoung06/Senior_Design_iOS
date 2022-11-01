@@ -22,7 +22,7 @@ extension JobItems {
     static func build(from documents: [QueryDocumentSnapshot]) -> [JobItems] {
         var items = [JobItems]()
         for document in documents {
-            items.append(JobItems(clubName: document["golfClub"] as? String ?? "",
+            items.append(JobItems(clubName: document["golfClubName"] as? String ?? "",
                                   Date: document["date"] as? String ?? "",
                                   Phone: document["phoneNumber"] as? String ?? "",
                                   reportTime: document["reportTime"] as? String ?? "",
