@@ -53,8 +53,6 @@ class LocationSearchTable : UITableViewController {
         handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
         dismiss(animated: true, completion: nil)
     }
-    
-
 }
 extension LocationSearchTable : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
