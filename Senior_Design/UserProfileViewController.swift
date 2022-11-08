@@ -65,7 +65,7 @@ class UserProfileViewController: UIViewController {
         
         myAlert.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler:
         { (action: UIAlertAction!) in
-        //change root view controller to login
+            //change root view controller to login
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
                                             
