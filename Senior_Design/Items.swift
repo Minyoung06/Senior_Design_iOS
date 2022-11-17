@@ -15,6 +15,7 @@ struct JobItems {
     let Phone: String?
     let reportTime: String?
     let teeTime: String?
+    let DocumentID:String?
 }
 
 extension JobItems {
@@ -26,7 +27,8 @@ extension JobItems {
                                   Date: document["date"] as? String ?? "",
                                   Phone: document["phoneNumber"] as? String ?? "",
                                   reportTime: document["reportTime"] as? String ?? "",
-                                  teeTime: document["teeTime"] as? String ?? ""))
+                                  teeTime: document["teeTime"] as? String ?? "",
+                                  DocumentID: document.documentID))
         }
         
         return items
