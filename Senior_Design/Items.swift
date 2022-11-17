@@ -49,9 +49,6 @@ class Service {
                 }else {
                     handler(JobItems.build(from: querySnapshot?.documents ?? []))
                 }
-            
             }
-        
     }
-    
 }

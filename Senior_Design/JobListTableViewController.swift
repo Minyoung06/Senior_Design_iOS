@@ -31,7 +31,6 @@ class JobListTableViewController: UIViewController,UITableViewDelegate,UITableVi
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -64,6 +63,7 @@ class JobListTableViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             tableView.beginUpdates()
             
@@ -92,11 +92,8 @@ class JobListTableViewController: UIViewController,UITableViewDelegate,UITableVi
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
-            
         }
     }
-    
-    
     
 }
 
