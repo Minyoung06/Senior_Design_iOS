@@ -66,6 +66,29 @@ class JobListTableViewController: UIViewController,UITableViewDelegate,UITableVi
         
         if editingStyle == .delete {
             tableView.beginUpdates()
+            
+            let docID = items[indexPath.row].DocumentID
+            //print("This is docID: ",docID ?? "")
+            
+            let docRef = Firestore.firestore()
+               .collection("JobShiftDatabase")
+            
+            docRef.getDocuments { snapshot, err in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                }
+                else {
+                    for document in snapshot!.documents {
+                        if(docID == document.documentID){
+                            //print("This one is same!", document.documentID)
+                            document.reference.updateData(["caddie": ""])
+                            document.reference.updateData(["accepted": "false"])
+                            print("Document successfully written!")
+                        }
+                    }
+                }
+            }
+            
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
