@@ -16,6 +16,10 @@ protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 
+struct MyPlacemark {
+    static var myPlacemark = ""
+}
+
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -24,8 +28,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var handleMapSearchDelegate:HandleMapSearch? = nil
     
     var selectedPin:MKPlacemark? = nil  //cache any incoming placemarks
-    
-    //var JobItems =  [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +78,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
+            locationManager.stopUpdatingLocation()
         }
     }
 
@@ -83,108 +86,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("error:: (error)")
     }
     
-    @objc func getJobAlert() {
-        
-        let userUID = Auth.auth().currentUser?.uid
-        print(userUID ?? String.self) //rJXVDO8azbTd1x1bDszSDBiMFy83
-        
-        let selectedPin = selectedPin!
-        let placemarkName = getPlacemarkName(placemark: selectedPin)
-        
-//        let jobInfo = getJobInfo()
-//        let address = jobInfo.1
-//        print(address)
-
-        let myAlert = UIAlertController(title: placemarkName, message: "Address: " + placemarkName, preferredStyle: UIAlertController.Style.alert)
-        
-        let accept = UIAlertAction(title: "Accept", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
-            self.jobAlertAccept()
-        })
-
-        // Create Cancel button with action handlder
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            print("Cancel button tapped")
-        }
-        
-        myAlert.addAction(accept)
-        myAlert.addAction(cancel)
-        
-        self.present(myAlert, animated:true, completion:nil)
+    @objc func showPopUp() {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpID") as! PopUpViewController
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
     }
     
-//    func getJobInfo() -> [String] {
-//        //Retrieve golfClubName, address, date, teeTime, phoneNumber from JobShiftDatabase
-//
-//        let selectedPin = selectedPin!
-//        let placemarkName = getPlacemarkName(placemark: selectedPin)
-//
-//        //Get specific document from current golfclub pin
-//        let docRef = Firestore.firestore()
-//           .collection("JobShiftDatabase")
-//           .whereField("golfClubName", isEqualTo: placemarkName)
-//
-//        //Get user information
-//        docRef.getDocuments { (querySnapshot, err) in
-//            if let err = err {
-//                print(err.localizedDescription)
-//            } else if querySnapshot!.documents.count != 1 {
-//                print("More than one document or none")
-//            } else {
-//                let document = querySnapshot!.documents.first
-//                let dataDescription = document?.data()
-//                guard let golfClubName = dataDescription?["golfClubName"] else { return }
-//                guard let address = dataDescription?["address"] else { return }
-//                guard let date = dataDescription?["date"] else { return }
-//                guard let reportTime = dataDescription?["reportTime"] else { return }
-//                guard let teeTime = dataDescription?["teeTime"] else { return }
-//                guard let phoneNumber = dataDescription?["phoneNumber"] else { return }
-//
-//                let golfClubAlert = golfClubName as? String ?? ""
-//                let addressAlert = address as? String ?? ""
-//                let dateAlert = date as? String ?? ""
-//                let reportTimeAlert = reportTime as? String ?? ""
-//                let teeTimeAlert = teeTime as? String ?? ""
-//                let phoneNumberAlert = phoneNumber as? String ?? ""
-//
-//                self.JobItems.append(contentsOf:[golfClubAlert, addressAlert, dateAlert, reportTimeAlert, teeTimeAlert, phoneNumberAlert])
-//                //print(JobItems)
-//            }
-//        }
-//        print(self.JobItems)
-//        return(self.JobItems)
-//    }
-    
-    func jobAlertAccept() {
-        //Get uid of currently logged in user
-        let userUID = Auth.auth().currentUser?.uid as String?
-        print(userUID!)
-        
+    @objc func passPlacemarkName() {
         let selectedPin = selectedPin!
         let placemarkName = getPlacemarkName(placemark: selectedPin)
-        
-        //Write this uid into the "caddie" field of the correct golf club name in JobShiftDatabase
-        let docRef = Firestore.firestore()
-           .collection("JobShiftDatabase")
-           .whereField("golfClubName", isEqualTo: placemarkName)
-
-        docRef.getDocuments { snapshot, err in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            }
-            else if snapshot?.documents.count != 1{
-                print("More than one document or none")
-            }
-            else {
-                for document in snapshot!.documents {
-                    document.reference.updateData(["caddie": userUID!])
-                    print("Document successfully written!")
-                }
-            }
-        }
+        MyPlacemark.myPlacemark = placemarkName
+        print("passPlacemarkName: \(placemarkName)")
     }
     
-    func getPlacemarkName(placemark:MKPlacemark) -> String{
+    func getPlacemarkName(placemark:MKPlacemark) -> String {
         // cache the pin
         selectedPin = placemark
         // clear existing pins
@@ -193,7 +110,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name //Eisenhower Park Golf Course
         let placemarkName = placemark.name
-        print(placemarkName!)
         return placemarkName!
     }
 
@@ -208,7 +124,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPoint(x: 0,y :0), size: smallSquare))
         button.setBackgroundImage(UIImage(named: "ChecklistIcon"), for: .normal)
-        button.addTarget(self, action: #selector(getJobAlert), for:.touchUpInside)
+        //button.addTarget(self, action: #selector(getJobAlert), for:.touchUpInside)
+        button.addTarget(self, action: #selector(passPlacemarkName), for:.touchUpInside)
+        button.addTarget(self, action: #selector(showPopUp), for:.touchUpInside)
+        print("mapView: \(MyPlacemark.myPlacemark)")
         pinView?.leftCalloutAccessoryView = button
 
         return pinView
@@ -234,3 +153,4 @@ extension MapViewController: HandleMapSearch {
         mapView.setRegion(region, animated: true)
     }
 }
+
