@@ -42,6 +42,7 @@ class Service {
     func get(collectionID: String,handler: @escaping ([JobItems]) -> Void) {
         database.collection("JobShiftDatabase")
             .whereField("caddie", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+            .whereField("accepted", isEqualTo: true)
             .addSnapshotListener{ querySnapshot, err in
                 if let error = err {
                     print(error.localizedDescription)
