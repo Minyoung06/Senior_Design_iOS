@@ -82,7 +82,7 @@ class JobListTableViewController: UIViewController,UITableViewDelegate,UITableVi
                         if(docID == document.documentID){
                             //print("This one is same!", document.documentID)
                             document.reference.updateData(["caddie": ""])
-                            document.reference.updateData(["accepted": "false"])
+                            document.reference.updateData(["accepted": false])
                             print("Document successfully written!")
                         }
                     }
